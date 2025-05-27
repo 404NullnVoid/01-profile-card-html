@@ -1,0 +1,62 @@
+body {
+  /* Adjusted gradient: less saturated pink, more peach */
+  background: linear-gradient(to bottom, #cc3366 10%, #ffd6b0 90%);
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Plant-like pattern using repeating SVG as a background image */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.13;
+  background-image: url("data:image/svg+xml;utf8,<svg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M10 90 Q50 10 90 90' stroke='%23993366' stroke-width='2' fill='none'/><circle cx='50' cy='30' r='7' fill='%23b266a3'/><ellipse cx='30' cy='70' rx='5' ry='10' fill='%23cc3366'/><ellipse cx='70' cy='70' rx='5' ry='10' fill='%23cc3366'/><circle cx='50' cy='15' r='3' fill='%23ffd6b0'/><circle cx='40' cy='40' r='2' fill='%23ffd6b0'/><circle cx='60' cy='40' r='2' fill='%23ffd6b0'/><circle cx='25' cy='80' r='3' fill='%23b266a3'/><circle cx='75' cy='80' r='3' fill='%23b266a3'/></svg>");
+  background-repeat: repeat;
+  background-size: 120px 120px;
+}
+
+/* Simple card styling */
+.profile-card {
+  position: relative;
+  z-index: 1;
+  max-width: 350px;
+  margin: 40px auto;
+  padding: 2rem;
+  background: #f3e8ff; /* light purple */
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #003366; /* dark blue */
+}
+
+h2 {
+  font-size: 2rem;
+  color: #708090; /* slate gray */
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center top; /* Crop image higher */
+  border-radius: 50%;
+  margin-top: 1.5rem;        /* Add space above the image */
+  margin-bottom: 1.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
